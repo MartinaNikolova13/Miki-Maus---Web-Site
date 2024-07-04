@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="search.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="galeriq.css" type="text/css">
+    <title>Галерия</title>
+    <link rel='icon' type='image/x-icon' href='mikey-mouse.png' />
+</head>
+
+<body>
+<center>
+    <a href="index.html"> <img src="originals/logo.jpg" width="350" height="145" alt="logo"></a>
+</center>
+   <br>
+    <nav class="navbar navbar-expand-md nav-custom" id="nav">
+        <div class="container-fluid navbar-custom">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a id="home" class="nav-item" href="index.html"></a>
+                </li>
+                <li><a class="nav-item" href="zafirmata.html">ЗА НАС</a></li>
+                <li class="dropdown active">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">КАТАЛОГ</a>
+                    <ul class="dropdown-menu dropdown-menu-custom">
+                        <li class="dropdown-item-custom"><a href="detski_stai_za_momiceta.html">Детски стаи за момичета</a></li>
+                        <li class="dropdown-item-custom"><a href="detski_stai_za_momceta.html">Детски стаи за момчета</a></li>
+                        <li class="dropdown-item-custom"><a href="baby_stai.html">Бебешки стаи</a></li>
+                        <li class="dropdown-item-custom"><a href="vsichki_stai.html">Всички стаи</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-item" href="promociq.html">ПРОМОЦИИ </a></li>
+                <li><a class="nav-item" href="galeriq.html">ГАЛЕРИЯ</a></li>
+                <li><a class="nav-item" href="kontakti.html">КОНТАКТИ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i></button>
+    <div class="container">
+        <div class="row galery_row">
+           
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis2.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis2.jpg" class="hover-shadow cursor"></a>
+            </div>
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis1.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis1.jpg" class="hover-shadow cursor"></a>
+            </div>
+        </div>
+
+        <div class="row galery_row">
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis3.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis3.jpg" class="hover-shadow cursor"></a>
+            </div>
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis4.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis4.jpg" class="hover-shadow cursor"></a>
+            </div>
+        </div>
+
+        <div class="row galery_row">
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis5.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis5.jpg" class="hover-shadow cursor"></a>
+            </div>
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis6.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis6.jpg" class="hover-shadow cursor"></a>
+            </div>
+        </div>
+
+        <div class="row galery_row">
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis7.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis7.jpg" class="hover-shadow cursor"></a>
+            </div>
+            <div class="column">
+                <a data-toggle="modal" data-imgpath="galeriq_snimki/ofis8.jpg" href="#myModal"><img class="image_full" src="galeriq_snimki/ofis8.jpg" class="hover-shadow cursor"></a>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" class="irounded mx-auto d-block modal-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#myModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var imgpath = button.data('imgpath')
+            var modal = $(this)
+            modal.find('.modal-body img').attr('src', imgpath)
+        })
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <footer>
+        <p>Created by Martina Nikolova.  Copyright &copy; 2020</p>
+    </footer>
+</body>
+
+</html>

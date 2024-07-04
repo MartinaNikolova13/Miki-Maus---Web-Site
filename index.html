@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="search.css" type="text/css">
+    <link rel="stylesheet" href="slideshow.css" type="text/css">
+    <link rel="stylesheet" href="social.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мики Маус</title>
+    <link rel='icon' type='image/x-icon' href='mikey-mouse.png'>
+</head>
+
+<body>
+    <center>
+        <a href="index.html"> <img src="originals/logo1.png" width="350" height="145" alt="logo"></a>
+    </center>
+   <br>
+    <nav class="navbar navbar-expand-md nav-custom" id="nav">
+        <div class="container-fluid navbar-custom">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a id="home" class="nav-item" href="index.html"></a>
+                </li>
+                <li><a class="nav-item" href="zafirmata.html">ЗА НАС</a></li>
+                <li class="dropdown active">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">КАТАЛОГ</a>
+                    <ul class="dropdown-menu dropdown-menu-custom">
+                        <li class="dropdown-item-custom"><a href="detski_stai_za_momiceta.html">Детски стаи за момичета</a></li>
+                        <li class="dropdown-item-custom"><a href="detski_stai_za_momceta.html">Детски стаи за момчета</a></li>
+                        <li class="dropdown-item-custom"><a href="baby_stai.html">Бебешки стаи</a></li>
+                        <li class="dropdown-item-custom"><a href="vsichki_stai.html">Всички стаи</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-item" href="promociq.html">ПРОМОЦИИ </a></li>
+                <li><a class="nav-item" href="galeriq.html">ГАЛЕРИЯ</a></li>
+                <li><a class="nav-item" href="kontakti.html">КОНТАКТИ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="mySlides pod">
+            <img class="image-left" src="nacalo/2.jpg" alt="Our promotions">
+            <a href="zafirmata.html"><img class="image-center" src="nacalo/1.jpg" alt="Our offers"></a>
+            <img class="image-right" src="nacalo/4.png" alt="Our team">
+        </div>
+        <div class="mySlides pod">
+            <img class="image-left" src="nacalo/3.png" alt="Our catalog">
+            <a href="promociq.html"><img class="image-center" src="nacalo/2.jpg" alt="Our promotions"></a>
+            <img class="image-right" src="nacalo/1.jpg" alt="Our offers">
+        </div>
+        <div class="mySlides pod">
+            <img class="image-left" src="nacalo/4.png" alt="Our team">
+            <a href="vsichki_stai.html"> <img class="image-center" src="nacalo/3.png" alt="Our catalog"></a>
+            <img class="image-right" src="nacalo/2.jpg" alt="Our promotions">
+        </div>
+        <div class="mySlides pod">
+            <img class="image-left" src="nacalo/1.jpg" alt="Our offers">
+            <a href="galeriq.html"><img class="image-center" src="nacalo/4.png" alt="Our team"></a>
+            <img class="image-right" src="nacalo/3.png" alt="Our catalog">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        const showInterval = 5000;
+        let slideIndex = 1;
+
+        showSlides(slideIndex);
+        slideInterval = setInterval(function() {
+            plusSlides(1)
+        }, showInterval);
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(function() {
+                plusSlides(n + 1)
+            }, showInterval);
+            showSlides(slideIndex = n);
+        }
+
+        function plusSlides(n) {
+            clearInterval(slideInterval);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+            if (n === -1) {
+                slideInterval = setInterval(function() {
+                    plusSlides(n + 2)
+                }, showInterval);
+            } else {
+                slideInterval = setInterval(function() {
+                    plusSlides(n + 1)
+                }, showInterval);
+            }
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <footer>
+        <p>Created by Martina Nikolova.  Copyright &copy; 2020</p>
+    </footer>
+</body>
+
+</html>
